@@ -1,7 +1,6 @@
 {
-  "name": "share-images",
-  "version": "1.0.0",
   "dependencies": {
-    "@vercel/og": "latest"
+    "@vercel/og": "latest",
+    "react": "latest"
   }
 }
