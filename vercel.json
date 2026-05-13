@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/og.jsx": {
+      "runtime": "vercel-og@1.0.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/og", "destination": "/api/og.jsx" }
+  ]
+}
