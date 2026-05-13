@@ -1,24 +1,10 @@
 {
   "name": "share-images",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/diesh/share-images.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/diesh/share-images/issues"
-  },
-  "homepage": "https://github.com/diesh/share-images#readme",
+  "type": "module",
   "dependencies": {
-    "@vercel/og": "^0.11.1"
+    "@vercel/og": "^0.6.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
