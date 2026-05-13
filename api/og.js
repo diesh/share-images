@@ -18,15 +18,79 @@ export default function handler(req) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#000',
+          backgroundColor: '#050505',
           color: '#fff',
           fontFamily: 'sans-serif',
+          position: 'relative',
         },
         children: [
-          { type: 'div', props: { style: { fontSize: 60, fontWeight: 'bold' }, children: 'My Working Style' } },
-          { type: 'div', props: { style: { fontSize: 40, color: '#ff4d4d', marginTop: 30 }, children: `Results for ${name}` } },
-          { type: 'div', props: { style: { fontSize: 30, marginTop: 10, opacity: 0.8 }, children: `Style: ${style}` } },
-          { type: 'div', props: { style: { position: 'absolute', bottom: 50, fontSize: 24, opacity: 0.6 }, children: 'diesh.ca' } },
+          // Subtle background glow
+          {
+            type: 'div',
+            props: {
+              style: {
+                position: 'absolute',
+                top: '150px',
+                width: '600px',
+                height: '300px',
+                background: 'rgba(255, 77, 77, 0.15)',
+                filter: 'blur(100px)',
+                borderRadius: '100%',
+              }
+            }
+          },
+          // Main Card
+          {
+            type: 'div',
+            props: {
+              style: {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                padding: '60px 80px',
+                borderRadius: '40px',
+              },
+              children: [
+                { 
+                  type: 'div', 
+                  props: { 
+                    style: { fontSize: 24, color: '#888', letterSpacing: '4px', marginBottom: 20 }, 
+                    children: 'WORKING PROFILE' 
+                  } 
+                },
+                { 
+                  type: 'div', 
+                  props: { 
+                    style: { fontSize: 90, fontWeight: 'bold', marginBottom: 10 }, 
+                    children: name 
+                  } 
+                },
+                { 
+                  type: 'div', 
+                  props: { 
+                    style: { fontSize: 48, color: '#ff4d4d', fontWeight: 'bold' }, 
+                    children: `${style} Style` 
+                  } 
+                },
+              ]
+            }
+          },
+          // Footer
+          {
+            type: 'div',
+            props: {
+              style: {
+                position: 'absolute',
+                bottom: 60,
+                fontSize: 20,
+                color: '#555',
+                letterSpacing: '2px',
+              },
+              children: 'DIESH.CA'
+            }
+          }
         ],
       },
     },
