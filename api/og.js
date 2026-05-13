@@ -21,25 +21,25 @@ export default function handler(req) {
           backgroundColor: '#050505',
           color: '#fff',
           fontFamily: 'sans-serif',
-          position: 'relative',
+          padding: '40px', // Margin around the edge
         },
         children: [
-          // Subtle background glow
+          // Background Glow (Larger and centered)
           {
             type: 'div',
             props: {
               style: {
                 position: 'absolute',
-                top: '150px',
-                width: '600px',
-                height: '300px',
-                background: 'rgba(255, 77, 77, 0.15)',
-                filter: 'blur(100px)',
+                top: '25%',
+                width: '800px',
+                height: '400px',
+                background: 'rgba(255, 77, 77, 0.2)',
+                filter: 'blur(120px)',
                 borderRadius: '100%',
               }
             }
           },
-          // Main Card
+          // Main Container (Full width)
           {
             type: 'div',
             props: {
@@ -47,48 +47,50 @@ export default function handler(req) {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                padding: '60px 80px',
-                borderRadius: '40px',
+                justifyContent: 'center',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                border: '2px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '20px', // Match iOS bubble rounding better
               },
               children: [
                 { 
                   type: 'div', 
                   props: { 
-                    style: { fontSize: 24, color: '#888', letterSpacing: '4px', marginBottom: 20 }, 
+                    style: { fontSize: 32, color: '#ff4d4d', letterSpacing: '8px', fontWeight: 'bold', marginBottom: 20 }, 
                     children: 'WORKING PROFILE' 
                   } 
                 },
                 { 
                   type: 'div', 
                   props: { 
-                    style: { fontSize: 90, fontWeight: 'bold', marginBottom: 10 }, 
+                    style: { fontSize: 160, fontWeight: '900', marginBottom: 10, letterSpacing: '-5px' }, 
                     children: name 
                   } 
                 },
                 { 
                   type: 'div', 
                   props: { 
-                    style: { fontSize: 48, color: '#ff4d4d', fontWeight: 'bold' }, 
+                    style: { fontSize: 70, color: '#aaa', fontWeight: '500' }, 
                     children: `${style} Style` 
                   } 
                 },
+                // Small Footer inside the box
+                {
+                  type: 'div',
+                  props: {
+                    style: {
+                      position: 'absolute',
+                      bottom: 40,
+                      fontSize: 28,
+                      color: '#444',
+                      letterSpacing: '4px',
+                    },
+                    children: 'DIESH.CA'
+                  }
+                }
               ]
-            }
-          },
-          // Footer
-          {
-            type: 'div',
-            props: {
-              style: {
-                position: 'absolute',
-                bottom: 60,
-                fontSize: 20,
-                color: '#555',
-                letterSpacing: '2px',
-              },
-              children: 'DIESH.CA'
             }
           }
         ],
