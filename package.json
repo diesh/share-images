@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@vercel/og": "latest",
-    "react": "latest"
-  }
-}
