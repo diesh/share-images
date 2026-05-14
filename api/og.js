@@ -103,36 +103,35 @@ export default function handler(req) {
                   }
                 },
 
-                // Tagline
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      fontSize: 36,
-                      color: '#888',
-                      fontWeight: '400',
-                      marginBottom: 48,
-                      letterSpacing: '0.3px',
-                    },
-                    children: tagline
-                  }
-                },
+				// Tagline - Increased to 44px
+				{
+				  type: 'div',
+				  props: {
+				    style: {
+				      fontSize: 44, // Was 36
+				      color: '#aaa', // Slightly brighter gray
+				      fontWeight: '400',
+				      marginBottom: 60,
+				      letterSpacing: '0.3px',
+				    },
+				    children: tagline
+				  }
+				},
 
-                // URL
-                {
-                  type: 'div',
-                  props: {
-                    style: {
-                      fontSize: 32,
-                      color: '#ffffff',
-                      fontWeight: '500',
-                      letterSpacing: '1px',
-                      opacity: 0.7,
-                    },
-                    children: 'personality.diesh.ca'
-                  }
-                }
-
+				// URL - Increased to 40px and full white
+				{
+				  type: 'div',
+				  props: {
+				    style: {
+				      fontSize: 40, // Was 32
+				      color: '#ffffff',
+				      fontWeight: '600', // Bolder
+				      letterSpacing: '1.5px',
+				      opacity: 0.9,
+				    },
+				    children: 'PERSONALITY.DIESH.CA' // Uppercase for better readability
+				  }
+				}
               ]
             }
           }
