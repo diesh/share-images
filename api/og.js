@@ -3,10 +3,11 @@ import { ImageResponse } from '@vercel/og';
 export const config = { runtime: 'edge' };
 
 const styleTaglines = {
+  'Architect': 'Builds ambitious visions with the discipline to execute them.',
+  'Pioneer':   'Explores freely, moves fast, and ships before perfecting.',
   'Expert':    'Precise thinker. Deep focus. Gets it right.',
-  'Driver':    'Bold decisions. Fast moves. Built to lead.',
-  'Amiable':   'People-first. Steady under pressure. Trusted.',
-  'Expressive':'Big ideas. High energy. Moves people.',
+  'Driver':    'Practical, fast, and action-oriented. Cuts through noise.',
+  'Integrator':'Holds vision and execution without needing to pick a side.',
 };
 
 export default function handler(req) {
